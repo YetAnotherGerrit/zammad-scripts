@@ -1,4 +1,4 @@
-# Assign existing users to organizations using "domain based assignment"
+# Assign organizations to existing users using "domain based assignment"
 
 Organization.where(domain_assignment: true).each do |org|
 	next if org.domain == nil
