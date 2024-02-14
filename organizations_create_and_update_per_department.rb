@@ -9,6 +9,6 @@ User.where.not(department: "").each do |u|
         puts ">> Organization '#{u.department}' not found. Going to create it:"
         org = Organization.create(name: u.department, created_by_id: 1, updated_by_id: 1)
     end
-    u.update!(organization: org)
+    u.update!(organization: org, updated_by_id: 1)
     puts ">> User updated."
 end
