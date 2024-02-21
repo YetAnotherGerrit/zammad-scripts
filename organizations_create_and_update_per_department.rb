@@ -1,5 +1,9 @@
 # Create and assign Organizations based on User.department-attribute
 
+# USE AT YOUR OWN RISK! NOT COVERED BY ZAMMAD SUPPORT!
+# This script is originally from GitHub>YetAnotherGerrit>zammad-scripts
+# Written for Zammad version 6.2
+
 User.where.not(department: "").each do |u|
     next if u.department == u.organization.name
     puts "Found User '#{u.fullname}' with department '#{u.department}' and Organization '#{u.organization.name}'. Going to update:"
