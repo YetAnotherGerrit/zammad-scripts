@@ -11,7 +11,7 @@ User.where.not(department: "").each do |u|
     org = Organization.find_by(name: u.department)
     if org == nil
         puts ">> Organization '#{u.department}' not found. Going to create it:"
-        org = Organization.create(name: u.department, created_by_id: 1, updated_by_id: 1)
+        org = Organization.create(name: u.department, shared: false, created_by_id: 1, updated_by_id: 1)
     end
     u.update!(organization: org, updated_by_id: 1)
     puts ">> User updated."
