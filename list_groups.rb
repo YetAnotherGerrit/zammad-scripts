@@ -2,7 +2,7 @@
 
 # USE AT YOUR OWN RISK! NOT COVERED BY ZAMMAD SUPPORT!
 # This script is originally from GitHub>YetAnotherGerrit>zammad-scripts
-# Written for Zammad version 6.2
+# Written for Zammad version 6.3.1
 
 puts "Group name                  | Active |  Count | Closed | Merged |"
 puts "----------------------------+--------+--------+--------+--------+"
